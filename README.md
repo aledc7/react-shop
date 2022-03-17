@@ -15,35 +15,34 @@
 ### A complete full CRUD app made with NodeJS, ReactJS and MongoDB.
 
 
-### Features:
+### Features :atom:
 
 
 - [x] FULL CRUD
 - [x] React Styled Component
-- [x] Data Persistence in LocalStorage and MongoDB
+- [x] Data Persistence in MongoDB Cloud  
+- [x] LocalStorage  
 - [x] Mobile First
 - [x] MaterialUI Elements
 - [x] React Icons
 - [x] Sweet Alert 2
 - [x] JWT
+- [x] Redux
+- [x] Stripe
 - [x] Made by a Systems Engineer ;)
 - [X] GPL License :D
 - [X] Boilerplate 
 - [ ] Awesome (coming soon)
  
 _________________________________________________________________________________
-#### Install:
-1. - Clone the repo
+#### Install 💻
+This Project is made up of 2 another projects:  
+First for the Backend we have a Rest API made with NodeJS, Express and MongoDB, placed in the __api__ folder.      
+For the Frontend we have a __React App__ in the __client__ folder.   
+Each project has the __installation instructions__ in its corresponding readme.md file inside  in each folder.    
 
-
-2. - Install dependences
-```
-npm install
-```
-3. - Run the App
-```
-npm start
-```
+__Important:__ For MongoDB you will need a account  on :point_right: [https://cloud.mongodb.com/](https://cloud.mongodb.com/)  
+and then, set yours credentials in __.env__ file.   
 _________________________________________________________________________________
 
 _________________________________________________________________________________
