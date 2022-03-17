@@ -41,7 +41,7 @@ First for the Backend we have a Rest API made with NodeJS, Express and MongoDB, 
 For the Frontend we have a __React App__ in the __client__ folder.   
 Each project has the __installation instructions__ in its corresponding readme.md file inside  in each folder.    
 
-__Important:___ For MongoDB you will need a account  on :point_right: [https://cloud.mongodb.com/](https://cloud.mongodb.com/)  
+__Important:__ For MongoDB you will need a account  on :point_right: [https://cloud.mongodb.com/](https://cloud.mongodb.com/)  
 and then, set yours credentials in __.env__ file.   
 _________________________________________________________________________________
 
