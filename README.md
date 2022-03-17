@@ -15,7 +15,7 @@
 ### A complete full CRUD app made with NodeJS, ReactJS and MongoDB.
 
 
-### Features:
+### Features :atom:
 
 
 - [x] FULL CRUD
@@ -34,7 +34,7 @@
 - [ ] Awesome (coming soon)
  
 _________________________________________________________________________________
-#### Install:  
+#### Install 💻
 This Project is made up of 2 another projects:  
 First for the Backend we have a Rest API made with NodeJS, Express and MongoDB, placed in the __api__ folder.      
 For the Frontend we have a __React App__ in the __client__ folder.   
