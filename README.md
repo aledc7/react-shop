@@ -20,7 +20,8 @@
 
 - [x] FULL CRUD
 - [x] React Styled Component
-- [x] Data Persistence in LocalStorage and MongoDB
+- [x] Data Persistence in MongoDB Cloud  
+- [x] LocalStorage  
 - [x] Mobile First
 - [x] MaterialUI Elements
 - [x] React Icons
