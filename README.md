@@ -26,6 +26,8 @@
 - [x] React Icons
 - [x] Sweet Alert 2
 - [x] JWT
+- [x] Redux
+- [x] Stripe
 - [x] Made by a Systems Engineer ;)
 - [X] GPL License :D
 - [X] Boilerplate 
