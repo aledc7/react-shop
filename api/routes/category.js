@@ -1,15 +1,15 @@
-const Product = require("../models/Product");
+const Category = require("../models/Category");
 const { verifyToken, verifyTokenAndAuthorization, verifyTokenAndAdmin } = require("./verifyToken");
 const router = require("express").Router();
 
 // CREATE
 router.post("/", verifyTokenAndAdmin, async(req,res)=>{
-  const newProduct = new Product(req.body)
+  const newCategory = new Category(req.body)
 
   try {
     // this .save method come from mongoDB
-    const saveProduct = await newProduct.save();
-    res.status(200).json(saveProduct);
+    const saveCategory = await newCategory.save();
+    res.status(200).json(saveCategory);
   } catch (error) {
     res.status(500).json(error);
   }
@@ -20,11 +20,11 @@ router.put("/:id", verifyTokenAndAdmin, async (req, res) => {
   
 
   try {
-    const updateProduct = await Product.findByIdAndUpdate(req.params.id, {
+    const updateCategory = await Category.findByIdAndUpdate(req.params.id, {
       $set: req.body
     }, { new: true })
 
-    res.status(200).json(updateProduct);
+    res.status(200).json(updateCategory);
 
   } catch (error) {
     res.status(500).json(error);
@@ -32,33 +32,33 @@ router.put("/:id", verifyTokenAndAdmin, async (req, res) => {
 });
 
 
-// GET PRODUCT
+// GET ONE
 router.get("/find/:id", async (req, res) => {
   try {
-    const product = await product.findById(req.params.id);
-    res.status(200).json(product)
+    const category = await category.findById(req.params.id);
+    res.status(200).json(category)
   } catch (error) {
     res.status(500).json(error)
   }
 });
 
-// GET ALL PRODUCTOS
+// GET ALL 
 router.get("/", async (req, res) => {
   const qNew = req.query.new;
   const qCategory = req.query.category;
   try {
-    let products;
+    let categories;
 
     if(qNew){
-      products = await Product.find().sort({createdAt: -1}).limit(10);
+      categories = await Category.find().sort({createdAt: -1}).limit(10);
     } else if(qCategory){
-      products = await Product.find({categories:{
+      categories = await Category.find({categories:{
         $in:[qCategory]
       }});
     }else{
-      products = await Product.find();
+      categories = await Category.find();
     }
-    res.status(200).json(products);
+    res.status(200).json(categories);
   } catch (error) {
     res.status(500).json(error);
   }
@@ -67,8 +67,8 @@ router.get("/", async (req, res) => {
 // DELETE
 router.delete("/:id", verifyTokenAndAdmin, async (req, res) => {
   try {
-    await Product.findByIdAndDelete(req.params.id)
-    res.status(200).json('Product has been deleted.')
+    await Category.findByIdAndDelete(req.params.id)
+    res.status(200).json('Category has been deleted.')
   } catch (error) {
     res.status(500).json(error)
   }
