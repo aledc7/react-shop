@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { popularProducts } from '../data.js';
 import Product from './Product.jsx';
 
 const Container = styled.div`
@@ -13,7 +12,6 @@ const Container = styled.div`
 
 const Products = ({ cat, filters, sort }) => {
 
-  console.log(cat, filters, sort);
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
 
@@ -23,7 +21,6 @@ const Products = ({ cat, filters, sort }) => {
       try {
         // axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
         const res = await axios.get(cat ? `http://localhost:5777/api/products?category=${cat}` : 'http://localhost:5777/api/products');
-        console.log(res);
         setProducts(res.data);
       } catch (error) {
 

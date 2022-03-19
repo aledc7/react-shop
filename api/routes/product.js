@@ -32,7 +32,7 @@ router.put("/:id", verifyTokenAndAdmin, async (req, res) => {
 });
 
 
-// GET PRODUCT
+// GET ONE
 router.get("/find/:id", async (req, res) => {
   try {
     const product = await product.findById(req.params.id);
@@ -42,7 +42,7 @@ router.get("/find/:id", async (req, res) => {
   }
 });
 
-// GET ALL PRODUCTOS
+// GET ALL
 router.get("/", async (req, res) => {
   const qNew = req.query.new;
   const qCategory = req.query.category;
