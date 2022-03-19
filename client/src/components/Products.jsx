@@ -61,9 +61,14 @@ const Products = ({ cat, filters, sort }) => {
 
   return (
     <Container>
-      {filteredProducts.map(item => (
-        <Product item={item} key={item._id} />
-      ))}
+      {/* if category exist then return all products for this category */}
+      { cat 
+        ? filteredProducts.map(item => (<Product item={item} key={item._id} />))
+
+        // else shows first 8 products
+        : products
+        .slice(0,8)
+        .map(item => (<Product item={item} key={item._id} />)) }
     </Container>
   )
 }
