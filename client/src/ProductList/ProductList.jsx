@@ -46,7 +46,7 @@ const ProductList = () => {
 
   const location = useLocation();
 
-  // catch te last part of url for filter the mongodb query and others
+  // catch te second element of url for filter
   const cat = location.pathname.split("/")[2];
 
   // state for the Filter Sizes and Colors
@@ -57,6 +57,8 @@ const ProductList = () => {
 
   // manage the change of filters and capture value
   const handleFilters = (e)=>{
+    
+
     const value = e.target.value;
     setFilters({
       ...filters,
@@ -72,15 +74,15 @@ const ProductList = () => {
             <Title>Dresses</Title>
             <FilterContainer>
                 <Filter>
-                    <FilterText>Filter Products</FilterText>
-                    <Select name='color' onChange={handleFilters}>
+                    <FilterText>Filter Products:</FilterText>
+                    <Select name='color' onChange={ handleFilters }>
                         <Option disabled>Color</Option>
-                        <Option>White</Option>
-                        <Option>Black</Option>
-                        <Option>Red</Option>
-                        <Option>Blue</Option>
-                        <Option>Yellow</Option>
-                        <Option>Green</Option>
+                        <Option>white</Option>
+                        <Option>black</Option>
+                        <Option>red</Option>
+                        <Option>blue</Option>
+                        <Option>yellow</Option>
+                        <Option>green</Option>
                     </Select>
                     <Select name='size' onChange={handleFilters}>
                         <Option disabled>Size</Option>
@@ -93,8 +95,8 @@ const ProductList = () => {
                 </Filter>
                 <Filter>
                     <FilterText>Sort Products</FilterText>
-                    <Select>
-                        <Option value= "newest" onChange={e=>setSort(e.target.value)}>Newest</Option>
+                    <Select onChange={(e)=>setSort(e.target.value)}>
+                        <Option value= "newest">Newest</Option>
                         <Option value= "asc">Price (asc)</Option>
                         <Option value= "desc">Price (desc)</Option>
                     </Select>
