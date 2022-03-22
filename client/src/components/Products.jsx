@@ -19,7 +19,6 @@ const Products = ({ cat, filters, sort }) => {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        // axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
         const res = await axios.get(cat ? `http://localhost:5777/api/products?category=${cat}` : 'http://localhost:5777/api/products');
         setProducts(res.data);
       } catch (error) {

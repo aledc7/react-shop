@@ -16,7 +16,7 @@ function App() {
         <Route path='/products/:category' element={<ProductList/>} />
         <Route path='/products' element={<ProductList/>} />
         <Route path="/login" element={ user ? <Home/> : <Login/>}/>
-        <Route path='/products/:id' element={<Product/>} />
+        <Route path='/product/:id' element={<Product/>} />
         <Route path='/cart' element={<Cart/>} />
         <Route path="/register" element={ user ? <Link to={`/`}/> : <Register/> }/>
       </Routes>
